@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { SearchControl } from "../common/SearchControl";
 import { useForm } from "react-hook-form";
 import { BiSearch } from "react-icons/bi";
@@ -8,12 +8,16 @@ import Link from "next/link";
 import ButtonSecondary from "../common/ButtonSecondary";
 
 const HeaderTop = () => {
+  const [isAppRendered, setIsAppRendered] = useState(false);
+  useEffect(() => {
+    setIsAppRendered(true);
+  }, []);
   const { control, watch } = useForm({
     defaultValues: {
       name: "",
     },
   });
-  return (
+  return isAppRendered ? (
     <div className="border-b py-4">
       <div className="content-container">
         <Row gutter={60}>
@@ -51,6 +55,8 @@ const HeaderTop = () => {
         </Row>
       </div>
     </div>
+  ) : (
+    <></>
   );
 };
 

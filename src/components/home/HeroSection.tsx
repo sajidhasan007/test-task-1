@@ -1,16 +1,21 @@
+"use client";
 import { Col, Row } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import CardSlider from "./CardSlider";
 
 const HeroSection = () => {
-  return (
-    <div className="mt-20">
+  const [isAppRendered, setIsAppRendered] = useState(false);
+  useEffect(() => {
+    setIsAppRendered(true);
+  }, []);
+  return isAppRendered ? (
+    <div className="mt-8">
       <Row>
         <Col
-          xs={{ span: 24 }}
           sm={{ span: 24 }}
-          md={{ span: 12 }}
+          md={{ span: 24 }}
           lg={{ span: 12 }}
-          xl={{ span: 12 }}
+          className="mt-8"
         >
           <h1 className="text-5xl font-[1000] uppercase">
             Discover, And CLLect DigiTal Art NEFTS
@@ -19,7 +24,7 @@ const HeroSection = () => {
             Digital marketplace for crypto collectibles and non-fungible tokens
             (NFTs). Buy,Sell, and discover exclusive digital assets.
           </p>
-          <div className="button-primary mt-8 w-full">Explore</div>
+          <div className="button-primary mt-8 w-full md:w-80">Explore</div>
         </Col>
         <Col
           xs={{ span: 24 }}
@@ -27,9 +32,13 @@ const HeroSection = () => {
           md={{ span: 12 }}
           lg={{ span: 12 }}
           xl={{ span: 12 }}
-        ></Col>
+        >
+          <CardSlider />
+        </Col>
       </Row>
     </div>
+  ) : (
+    <></>
   );
 };
 

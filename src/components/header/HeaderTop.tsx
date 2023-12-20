@@ -14,11 +14,11 @@ const HeaderTop = () => {
     },
   });
   return (
-    <div className="border-b pb-4">
+    <div className="border-b py-4">
       <div className="content-container">
         <Row gutter={60}>
           <Col span={12} className="flex items-center justify-between ">
-            <div className="text-4xl font-black text-site-primary cursor-pointer transition-all  hover:scale-110">
+            <div className="text-4xl font-[1000] text-site-primary cursor-pointer transition-all  hover:scale-110">
               <h1>NFTERS</h1>
             </div>
             {menuItem.map((item) => (
@@ -32,7 +32,7 @@ const HeaderTop = () => {
             ))}
           </Col>
 
-          <Col span={12} className="flex items-center justify-between">
+          <Col span={12} className="flex items-center justify-between gap-4">
             <SearchControl
               className="rounded-3xl"
               control={control}
@@ -45,8 +45,8 @@ const HeaderTop = () => {
               }
             />
 
-            <ButtonSecondary title="Upload" />
-            <div className="button-primary">About</div>
+            <div className="button-primary w-72">Upload</div>
+            <ButtonSecondary title="Connect Wallet" />
           </Col>
         </Row>
       </div>

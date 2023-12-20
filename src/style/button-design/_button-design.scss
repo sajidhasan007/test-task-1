@@ -1,0 +1,99 @@
+.button-secondary {
+  --c: #{$primaryColor};
+  color: var(--c);
+  font-size: 16px;
+  border: 2px solid var(--c);
+  width: 20em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+  border-radius: 50px;
+  // padding: 20px 40px;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+
+  &:hover span {
+    transform: translateY(0) scale(2);
+  }
+
+  span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  span:nth-child(1) {
+    --n: 1;
+    left: calc((var(--n) - 1) * 25%);
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+  }
+
+  span:nth-child(2) {
+    --n: 2;
+    left: calc((var(--n) - 1) * 25%);
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+  }
+
+  span:nth-child(3) {
+    --n: 3;
+    left: calc((var(--n) - 1) * 25%);
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+  }
+
+  span:nth-child(4) {
+    --n: 4;
+    left: calc((var(--n) - 1) * 25%);
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+  }
+  //   &:hover {
+  //     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); // Add a fancy box shadow on hover
+  //   }
+
+  //   &:hover span {
+  //     transform: translateY(0) scale(2);
+  //   }
+}
+
+.button-primary {
+  --c: #{$primaryColor};
+  color: var(--c);
+  font-size: 16px;
+  background-color: var(--c);
+  width: 20em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 1em;
+  color: white;
+  border-radius: 50px;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}

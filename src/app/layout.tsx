@@ -1,13 +1,13 @@
+import "@/style/globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import BaseRootLayout from "@/components/root-layout/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Alzaf Assignment",
-  description: "This is a assignment for alzaf",
+  title: "Task Assignment",
+  description: "This is a assignment for test",
 };
 
 export default function RootLayout({

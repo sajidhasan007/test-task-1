@@ -1,4 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
+import HomeTopCollections from "@/components/home/HomeTopCollections";
 import NftHistory from "@/components/home/NftHistory";
 
 const imageStyle = {
@@ -7,9 +8,10 @@ const imageStyle = {
 };
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div>
       <HeroSection />
       <NftHistory />
+      <HomeTopCollections />
     </div>
   );
 }

@@ -9,7 +9,7 @@ const HeroSection = () => {
     setIsAppRendered(true);
   }, []);
   return isAppRendered ? (
-    <div className="mt-8 content-container border">
+    <div className="mt-8 content-container pb-32">
       <Row>
         <Col
           sm={{ span: 24 }}

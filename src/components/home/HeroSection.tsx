@@ -9,7 +9,7 @@ const HeroSection = () => {
     setIsAppRendered(true);
   }, []);
   return isAppRendered ? (
-    <div className="mt-8">
+    <div className="mt-8 content-container border">
       <Row>
         <Col
           sm={{ span: 24 }}
@@ -33,7 +33,9 @@ const HeroSection = () => {
           lg={{ span: 12 }}
           xl={{ span: 12 }}
         >
-          <CardSlider />
+          <div className="flex justify-end">
+            <CardSlider />
+          </div>
         </Col>
       </Row>
     </div>

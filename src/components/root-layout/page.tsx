@@ -6,7 +6,7 @@ const BaseRootLayout = ({ children }: any) => {
   return (
     <div>
       <HeaderTop />
-      <div className="content-container">{children}</div>
+      <div>{children}</div>
       <Footer />
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import TopCollection from "./TopCollection";
 import { Col, Row } from "antd";
+import ThumbnailGallery from "../common/ThumbnailGallery";
 
 const HomeTopCollections = () => {
   return (
@@ -12,7 +13,7 @@ const HomeTopCollections = () => {
           lg={{ span: 16 }}
           className="mt-8"
         >
-          HomeTopCollections
+          <ThumbnailGallery />
         </Col>
         <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 8 }}>
           <TopCollection />

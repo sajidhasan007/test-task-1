@@ -1,22 +1,39 @@
 import { Avatar } from "antd";
-import React from "react";
+import React, { FC } from "react";
 import { GoZap } from "react-icons/go"; // Import Swiper styles
 
-const CollectorCard = () => {
+interface ICollectorCardProps {
+  slNo: number;
+  title: string;
+  price: number;
+  percentage: string;
+  totalData: number;
+}
+
+const CollectorCard: FC<ICollectorCardProps> = ({
+  slNo,
+  title,
+  price,
+  percentage,
+  totalData,
+}) => {
   return (
-    <div className="flex items-center gap-2">
-      <h3 className="font-extrabold text-4xl text-black">1</h3>
-      <div className="flex items-center gap-4">
-        <Avatar src="/image-10.jpg" size={"large"} />
-        <div className="">
-          <h3 className="font-extrabold text-lg text-black">CryptoFunks</h3>
-          <div className="flex items-center gap-2">
-            <GoZap />
-            <p>19,769.23</p>
+    <div className="">
+      <div className="flex items-center gap-2 ">
+        <h3 className="font-extrabold text-2xl text-black">{slNo}</h3>
+        <div className="flex items-center justify-between gap-4">
+          <Avatar src="/image-10.jpg" size={"large"} />
+          <div className="">
+            <h3 className="font-extrabold text-lg text-black">{title}</h3>
+            <div className="flex items-center gap-2">
+              <GoZap />
+              <p>{price}</p>
+            </div>
           </div>
+          <h2 className="text-2xl font-bold text-green-600 ">{percentage}</h2>
         </div>
-        <h2 className="text-2xl font-bold text-green-600">+26.52%</h2>
       </div>
+      {slNo !== totalData ? <hr className="my-3" /> : <></>}
     </div>
   );
 };

@@ -24,9 +24,9 @@ const HeaderTop = () => {
           <Col
             xs={{ span: 0 }}
             sm={{ span: 0 }}
-            md={{ span: 12 }}
-            lg={{ span: 12 }}
-            xl={{ span: 12 }}
+            md={{ span: 24 }}
+            lg={{ span: 24 }}
+            xl={{ span: 24 }}
           >
             <Row gutter={60}>
               <Col span={12} className="flex items-center justify-between ">
@@ -65,11 +65,17 @@ const HeaderTop = () => {
               </Col>
             </Row>
           </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 0 }}>
+          {/* <Col
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 0 }}
+            lg={{ span: 0 }}
+            xl={{ span: 0 }}
+          >
             <div className="text-5xl">
               <TbBaselineDensityMedium />
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </div>
     </div>

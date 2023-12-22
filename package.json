@@ -12,6 +12,7 @@
     "@ant-design/static-style-extract": "^1.0.2",
     "@types/react-image-gallery": "^1.2.4",
     "antd": "^5.12.4",
+    "framer-motion": "^10.16.16",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",

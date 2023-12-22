@@ -33,7 +33,7 @@ const HeroSection = () => {
           lg={{ span: 12 }}
           xl={{ span: 12 }}
         >
-          <div className="flex justify-end">
+          <div className="flex justify-end mt-6 md:mt-0">
             <CardSlider />
           </div>
         </Col>

@@ -13,7 +13,7 @@ const NftHistory = () => {
             </h1>
           </Col>
           <Col sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            <div className="flex gap-2 ">
+            <div className="flex gap-2 mt-8 md:mt-0">
               <div className="text-3xl">
                 <MdOutlineBookmarkAdded />
               </div>
@@ -27,7 +27,7 @@ const NftHistory = () => {
             </div>
           </Col>
           <Col sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            <div className="flex gap-2 ">
+            <div className="flex gap-2 mt-8 md:mt-">
               <div className="text-3xl">
                 <BiBarChartAlt2 />
               </div>

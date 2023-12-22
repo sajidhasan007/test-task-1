@@ -1,9 +1,14 @@
+"use client";
 import { Col, Row } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineBookmarkAdded } from "react-icons/md";
 import { BiBarChartAlt2 } from "react-icons/bi";
 const NftHistory = () => {
-  return (
+  const [isAppRendered, setIsAppRendered] = useState(false);
+  useEffect(() => {
+    setIsAppRendered(true);
+  }, []);
+  return isAppRendered ? (
     <div className="bg-gray-100 py-32">
       <div className="content-container">
         <Row gutter={30}>
@@ -43,6 +48,8 @@ const NftHistory = () => {
         </Row>
       </div>
     </div>
+  ) : (
+    <></>
   );
 };
 

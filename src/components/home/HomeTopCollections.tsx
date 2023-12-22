@@ -1,10 +1,15 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import TopCollection from "./TopCollection";
 import { Col, Row } from "antd";
 import ThumbnailGallery from "../common/ThumbnailGallery";
 
 const HomeTopCollections = () => {
-  return (
+  const [isAppRendered, setIsAppRendered] = useState(false);
+  useEffect(() => {
+    setIsAppRendered(true);
+  }, []);
+  return isAppRendered ? (
     <div className="content-container py-32 ">
       <Row>
         <Col
@@ -20,6 +25,8 @@ const HomeTopCollections = () => {
         </Col>
       </Row>
     </div>
+  ) : (
+    <></>
   );
 };
 
